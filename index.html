@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sally Student | Resume</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body id="application-root">
+  
+        <script src="https://unpkg.com/react@16/umd/react.development.js">
+        </script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+        </script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+        </script>
+        <script type="text/babel">
+            // Our code will go here
+            function App(props) {
+                console.log(props)
+                return (
+                    <div>
+                        <header className="banner">
+                            {props.children[0]}
+                            <div className="header-text">
+                                {props.children[1]}
+                                {props.children[2]}
+                            </div>
+                        </header>
+                        <main>
+                            {props.children[3]}
+                            {props.children[4]}
+                            {props.children[5]}
+                        </main>
+                    </div>
+                );
+            }
+
+            // Nested elements inside the App
+            ReactDOM.render(
+            <App>
+                <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Photo of Sally Student"/>
+                <h1>Sally Student</h1>
+                <h2>I'm an aspiring full stack web developer. I love cats, coding, and crocheting.</h2>
+                <section>
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:ilanawexler@yahoo.com">ilanawexler@yahoo.com</a></li>
+                        <li>Phone: 212.555.1234</li>
+                        <li>Address:<address>170 3rd Avenue<br/>Brooklyn, NY 11217</address></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Education</h3>
+                    <p>New York University<br/><i>Bachelor of Arts, Major in Psychology</i></p>
+                </section>
+                <section>
+                    <h3>Work Experience</h3>
+                    <ul>
+                        <li><strong>Sushi Mambeaux: server</strong>
+                        <br/><i>September 2017 - current</i>
+                        <br/>Serve food and beverages with a side of 'tude.</li>
+                        <li><strong>Hillary Rodham Clinton Campaign: fundraiser</strong>
+                        <br/><i>March 16, 2016</i>
+                        <br/>Raised awareness and $$ for the Kween of the USA.</li>
+                        <li><strong>Deals, Deals, Deals: sales rep</strong>
+                        <br/><i>January 2015 - March 2016</i>
+                        <br/>Got those deals and tweeted about em.</li>
+                    </ul>
+                </section>
+            </App>,
+            document.querySelector('#application-root')
+            );
+         </script>
+    </body>
+</html>
